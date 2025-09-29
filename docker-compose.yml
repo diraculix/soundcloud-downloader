@@ -1,7 +1,9 @@
 version: "3.9"
+
 services:
   scdl:
-    build: .
+    build:
+      context: .
     container_name: soundcloud-downloader
     restart: unless-stopped
     tty: true
@@ -11,6 +13,7 @@ services:
     volumes:
       - /mnt/Media/music/soundcloud/lukas-wolter-779075141:/Music/SoundCloud/lukas-wolter-779075141
     logging:
+      driver: "json-file"
       options:
         max-size: "10m"
         max-file: "3"
