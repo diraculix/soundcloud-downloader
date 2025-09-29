@@ -9,7 +9,7 @@ services:
     # network_mode: host
     # privileged: true
     volumes:
-      - /mnt/ZFS-RAID1-4TB/Media/media/music/soundcloud/lukas-wolter-779075141:/Music/SoundCloud/lukas-wolter-779075141
+      - /mnt/Media/media/music/soundcloud/lukas-wolter-779075141:/Music/SoundCloud/lukas-wolter-779075141
     logging:
       driver: "json-file"
       options:
