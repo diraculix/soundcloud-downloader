@@ -37,10 +37,11 @@ ENV LANG=en_US.UTF-8
 ENV LANGUAGE=en_US.UTF-8
 
 # Clone the scdl repository
-RUN git clone https://github.com/flyingrub/scdl.git
+# RUN git clone https://github.com/flyingrub/scdl.git
 
 # Change the working directory
-WORKDIR /scdl
+#WORKDIR /scdl
+RUN pip install scdl
 
 # Install the package
 RUN python setup.py install
