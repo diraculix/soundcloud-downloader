@@ -22,7 +22,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean
 
 # Create system link to python3
-RUN ln -s /usr/bin/python3 /usr/bin/python
+# RUN ln -s /usr/bin/python3 /usr/bin/python
+RUN pip install .
 
 # Set up the download directories
 RUN mkdir -p /Music/SoundCloud/lukas-wolter-779075141
